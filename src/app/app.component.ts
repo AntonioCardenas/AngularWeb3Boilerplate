@@ -17,11 +17,9 @@ export class AppComponent {
 
 
   Connect() {
-    console.log('here')
     this.web3.connectAccount().then(response => {
       console.log(response);
       this.data = response
-
     })
   }
 

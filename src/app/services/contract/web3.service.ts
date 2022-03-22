@@ -28,13 +28,32 @@ export class Web3Service {
       walletconnect: {
         package: WalletConnectProvider, // required
         options: {
-          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1", // required
+          infuraId: 'env', // required change this with your own infura id
+          description: 'Scan the qr code and sign in',
+          qrcodeModalOptions: {
+            mobileLinks: [
+              'rainbow',
+              'metamask',
+              'argent',
+              'trust',
+              'imtoken',
+              'pillar'
+            ]
+          }
         }
-      }
+      },
+      injected: {
+        display: {
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg',
+          name: 'metamask',
+          description: "Connect with the provider in your Browser"
+        },
+        package: null
+      },
     };
 
     this.web3Modal = new Web3Modal({
-      network: "mainnet", // optional
+      network: "mainnet", // optional change this with the net you want to use like rinkeby etc
       cacheProvider: true, // optional
       providerOptions, // required
       theme: {

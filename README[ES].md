@@ -45,6 +45,15 @@ Ejecuta `ng e2e` para ejecutar pruebas de principio a fin en la plataforma de su
 Esta Dapp usa web3modal nos permite conectarnos a mas de un provedor de wallet 
 puedes obtener mas información [aqui](https://github.com/Web3Modal/web3modal)
 
+## Obetener credencial en infura 
+
+Crea una cuenta en infura [aqui](https://infura.io/)
+En web3.service.ts linea 31 ingresa tus credenciales en infuraId: ''
+
+## Change Network
+
+en ``web3.serrvice.ts`` linea 56 tu puedes cambiar la red a la que quieras usar cambiando
+ ``network: "mainnet",``  a , ``network: "rinkeby",``  o  ``network: "ropsten",``
 
 ## Dependencias y cambios con respecto a una aplicación Angular tradicional 
 

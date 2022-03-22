@@ -47,7 +47,15 @@ package that implements end-to-end testing capabilities.
 This Dapp use web3modal allow us to use more wallet connectors
 you can get more info [here](https://github.com/Web3Modal/web3modal)
 
+## Get infura key
 
+Create an infura account [here](https://infura.io/)
+in web3.serrvice.ts line 31 insert your key in infuraId: ''
+
+## Change Network
+
+in ``web3.serrvice.ts`` line 56 you can change the network to your desire net
+to  ``network: "mainnet",`` or ``network: "rinkeby",`` or ``network: "ropsten",``
 
 
 ## Dependencies and changes to common Angular App

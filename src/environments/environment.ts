@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  magicUrl: 'pk_live_4C3D3B6CC05BD3EB',
-  SEED: ""
+  infuraId: '',
 };
 
 /*
