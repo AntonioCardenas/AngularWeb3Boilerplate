@@ -1,5 +1,14 @@
 {
   "name": "angularweb3",
+  "author": {
+    "name": "@yeoudev",
+    "url": "https://twitter.com/yeoudev"
+  },
+  "contributors": [
+    {
+      "name": ""
+    }
+  ],
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
