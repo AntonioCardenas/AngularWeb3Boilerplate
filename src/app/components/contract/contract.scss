@@ -1,0 +1,374 @@
+.contract-card {
+  height: 100%;
+}
+
+.contract-content {
+  padding: 0;
+}
+
+.not-connected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.connection-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.connection-message i {
+  font-size: 3rem;
+  color: #d1d5db;
+}
+
+.connection-message p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.contract-interface {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.address-input,
+.recipient-input,
+.amount-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.address-input:focus,
+.recipient-input:focus,
+.amount-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.address-input.error,
+.recipient-input.error,
+.amount-input.error {
+  border-color: #ef4444;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.contract-actions,
+.transfer-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.load-btn,
+.transfer-btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+.contract-info {
+  margin-top: 1rem;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.info-value {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #f8fafc;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.transfer-section {
+  margin-top: 1rem;
+}
+
+.transfer-results {
+  margin-top: 2rem;
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.success-content,
+.error-content {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.success-content {
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+}
+
+.error-content {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.success-header,
+.error-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.success-header {
+  color: #065f46;
+}
+
+.error-header {
+  color: #991b1b;
+}
+
+.success-header i,
+.error-header i {
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: #991b1b;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hash-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hash-label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.hash-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hash-text {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #ffffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}
+
+.explorer-btn {
+  flex-shrink: 0;
+}
+
+/* PrimeNG Overrides */
+:host ::ng-deep .p-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .p-card .p-card-header {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+:host ::ng-deep .p-card .p-card-title {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1.5rem;
+}
+
+:host ::ng-deep .p-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+:host ::ng-deep .p-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:host ::ng-deep .p-button.p-button-primary {
+  background: #3b82f6;
+}
+
+:host ::ng-deep .p-button.p-button-primary:hover {
+  background: #2563eb;
+}
+
+:host ::ng-deep .p-button.p-button-success {
+  background: #10b981;
+}
+
+:host ::ng-deep .p-button.p-button-success:hover {
+  background: #059669;
+}
+
+:host ::ng-deep .p-button.p-button-secondary {
+  background: #6b7280;
+}
+
+:host ::ng-deep .p-button.p-button-secondary:hover {
+  background: #4b5563;
+}
+
+:host ::ng-deep .p-inputtext {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+:host ::ng-deep .p-inputtext:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+:host ::ng-deep .p-inputtext.error {
+  border-color: #ef4444;
+}
+
+:host ::ng-deep .p-inputnumber {
+  border-radius: 8px;
+}
+
+:host ::ng-deep .p-inputnumber .p-inputtext {
+  border-radius: 8px;
+}
+
+:host ::ng-deep .p-divider .p-divider-content {
+  background: #ffffff;
+}
+
+:host ::ng-deep .p-dataview {
+  background: transparent;
+}
+
+:host ::ng-deep .p-dataview .p-dataview-content {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .hash-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hash-text {
+    width: 100%;
+  }
+
+  .explorer-btn {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,87 @@
+<p-card header="Wallet Connection" styleClass="wallet-card">
+  <div class="wallet-content">
+    <div class="connection-status">
+      <div class="status-indicator" [class.connected]="isConnected">
+        <i
+          class="pi"
+          [class.pi-check-circle]="isConnected"
+          [class.pi-times-circle]="!isConnected"
+        ></i>
+        <span>{{ isConnected ? 'Connected' : 'Not Connected' }}</span>
+      </div>
+    </div>
+
+    <p-divider></p-divider>
+
+    <div class="wallet-actions">
+      <div class="action-group">
+        <label class="action-label">Connect to MetaMask</label>
+        <p-button
+          label="Connect Wallet"
+          icon="pi pi-wallet"
+          severity="primary"
+          [disabled]="isConnected"
+          (onClick)="connectWallet()"
+          styleClass="connect-btn"
+        >
+        </p-button>
+      </div>
+
+      @if (isConnected) {
+      <div class="action-group">
+        <label class="action-label">Disconnect Wallet</label>
+        <p-button
+          label="Disconnect"
+          icon="pi pi-power-off"
+          severity="danger"
+          (onClick)="disconnectWallet()"
+          styleClass="disconnect-btn"
+        >
+        </p-button>
+      </div>
+      }
+    </div>
+
+    @if (isConnected && walletInfo) {
+    <div class="wallet-info">
+      <p-divider></p-divider>
+
+      <div class="info-section">
+        <h4 class="info-title">Account Information</h4>
+
+        <div class="info-item">
+          <label class="info-label">Address:</label>
+          <div class="address-display">
+            <span class="address-text"
+              >{{ formatAddress(walletInfo.address) }}</span
+            >
+            <p-chip
+              [label]="walletInfo.networkName"
+              icon="pi pi-globe"
+              styleClass="network-chip"
+            >
+            </p-chip>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <label class="info-label">Balance:</label>
+          <div class="balance-display">
+            <span class="balance-amount">{{ walletInfo.balance }}</span>
+            <span class="balance-unit">ETH</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    } @if (message) {
+    <div class="messages">
+      <p-message
+        [severity]="messageType"
+        [text]="message"
+        styleClass="status-message"
+      >
+      </p-message>
+    </div>
+    }
+  </div>
+</p-card>

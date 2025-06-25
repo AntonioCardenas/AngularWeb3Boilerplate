@@ -1,0 +1,244 @@
+.wallet-card {
+  height: 100%;
+}
+
+.wallet-content {
+  padding: 0;
+}
+
+.connection-status {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  transition: all 0.3s ease;
+}
+
+.status-indicator.connected {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #d1fae5;
+}
+
+.status-indicator i {
+  font-size: 1.1rem;
+}
+
+.wallet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.connect-btn {
+  width: 100%;
+}
+
+.disconnect-btn {
+  width: 100%;
+}
+
+.wallet-info {
+  margin-top: 1rem;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.address-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.address-text {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #f8fafc;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.network-chip {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.balance-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.balance-amount {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+}
+
+.balance-unit {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.messages {
+  margin-top: 1.5rem;
+}
+
+.status-message {
+  border-radius: 8px;
+}
+
+/* PrimeNG Overrides */
+:host ::ng-deep .p-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .p-card .p-card-header {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+:host ::ng-deep .p-card .p-card-title {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1.5rem;
+}
+
+:host ::ng-deep .p-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+:host ::ng-deep .p-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:host ::ng-deep .p-button.p-button-primary {
+  background: #3b82f6;
+}
+
+:host ::ng-deep .p-button.p-button-primary:hover {
+  background: #2563eb;
+}
+
+:host ::ng-deep .p-button.p-button-danger {
+  background: #ef4444;
+}
+
+:host ::ng-deep .p-button.p-button-danger:hover {
+  background: #dc2626;
+}
+
+:host ::ng-deep .p-divider .p-divider-content {
+  background: #ffffff;
+}
+
+:host ::ng-deep .p-message {
+  border-radius: 8px;
+  border: none;
+}
+
+:host ::ng-deep .p-message.p-message-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+
+:host ::ng-deep .p-message.p-message-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+
+:host ::ng-deep .p-chip {
+  border-radius: 16px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .address-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .balance-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .balance-amount {
+    font-size: 1.1rem;
+  }
+}
