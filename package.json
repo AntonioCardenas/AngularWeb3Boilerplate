@@ -1,6 +1,27 @@
 {
   "name": "angularweb3",
-  "version": "0.0.0",
+  "author": {
+    "name": "@yeoudev",
+    "url": "https://twitter.com/yeoudev"
+  },
+  "description": "A simple Angular application to interact with Ethereum smart contracts using Ethers.js and PrimeNG.",
+  "keywords": [
+    "angular",
+    "web3",
+    "ethers",
+    "primeng",
+    "ethereum",
+    "blockchain",
+    "dapp",
+    "decentralized",
+    "frontend"
+  ],
+  "contributors": [
+    {
+      "name": ""
+    }
+  ],
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
